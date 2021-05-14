@@ -2,7 +2,7 @@ const User = require('./User');
 const BlogPost = require('./BlogPost');
 const BlogComment = require('./BlogComment');
 // Foreign keys and respective alias defined
-User.hasMany(Post, {
+User.hasMany(BlogPost, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
@@ -22,7 +22,7 @@ BlogComment.belongsTo(BlogPost, {
   onDelete: 'CASCADE'
 });
 
-Post.hasMany(BlogComment, {
+BlogPost.hasMany(BlogComment, {
   foreignKey: 'post_id',
   onDelete: 'CASCADE'
 });
