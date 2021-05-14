@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="dashboard-name">Welcome, {{name}}!</h2>
+    </div>
+  </div>
+  {{#if BlogPosts.length}}
+  <div class="row mt-4">
+    <div class="col-12 post-list">
+      <h3>Your Posts:</h3>
+      {{#each BlogPosts as |blogPost| }}
+      <div class="row mb-2">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="row">
+            <div class="col-6">
+              <h4 style="text-align: left;"><a href="/post/{{blogPost.id}}">{{blogPost.title}}</a></h4>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-sm btn-primary edit-button" data-id="{{blogPost.id}}">EDIT POST</button>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-sm btn-danger delete-button" data-id="{{blogPost.id}}">DELETE</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+  <div class="row mt-4">
+    <div class="col-12">
+      <h3>Create a New Blog Post:</h3>
+      <form class="form new-post-form">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-dark input-text" id="inputGroup-sizing-default">Title:</span>
+          </div>
+          <input type="text" class="form-control" id="post-title">
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-dark input-text">Post:
+
+              <Body></Body>
+            </span>
+          </div>
+          <textarea class="form-control" id="post-body"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-dark">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{> main-logout}}
+<script src="./js/dashboard.js"></script>

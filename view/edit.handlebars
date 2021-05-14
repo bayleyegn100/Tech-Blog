@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card blog-card mb-3">
+    <h5 class="card-header bg-dark">
+      <a class="blog-title" href="/post/{{id}}">{{title}}</a>
+      <p class="blog-author">Created by {{user.name}} on {{format_date date_created}}</p>
+    </h5>
+    <p>{{body}}</p>
+  </div>
+  <br>
+    <div class="row mt-4">
+    <div class="col-12">
+      <h3>Edit your Blog Post:</h3>
+      <form class="form new-post-form">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-dark input-text" id="inputGroup-sizing-default">Title:</span>
+          </div>
+          <input type="text" class="form-control" id="post-title">
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-dark input-text">Post:
+              <Body></Body>
+            </span>
+          </div>
+          <textarea class="form-control" id="post-body"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-dark" id="update-button">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/logout.js"></script>
+<script src="../../js/edit.js"></script>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card blog-card mb-3">
+    <h5 class="card-header bg-dark">
+      <a class="blog-title" href="/blogPost/{{id}}">{{title}}</a>
+      <p class="blog-author">Created by {{user.name}} on {{format_date date_created}}</p>
+    </h5>
+    <p>{{body}}</p>
+  </div>
+  <br>
+  {{!-- {{#if comment.length}} --}}
+  {{#each BlogComments as |blogComment|}}
+  <div class="card blog-card mb-3">
+    <h5 class="card-header bg-dark">
+      <p class="blog-author">Comment from {{blogComment.user.name}} created on {{format_date blogComment.date_created}}</p>
+    </h5>
+    <p>{{blogComment.body}}</p>
+  </div>
+  {{/each}}
+  {{!-- {{/if}} --}}
+  <form class="new-comment-form">
+    <div class="input-group new-comment-form">
+      <div class="input-group-prepend new-comment-form">
+        <span class="input-group-text new-comment-form bg-dark input-text">Add a comment:</span>
+      </div>
+      <textarea class="form-control" id="comment-body"></textarea>
+      <br>
+      <br>
+      <div class="input-group new-comment-form">
+        <button type="submit" class="btn btn-dark mt-2" id="submit-comment">Post Comment!</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="../js/post.js"></script>
+{{> blogPost-logout}}
