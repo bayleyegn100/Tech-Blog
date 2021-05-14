@@ -15,7 +15,7 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 // Updates blog post by its id.
-router.put("/:id", withAuth, async (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   BlogPost.update(
     {
       title: req.body.title,
@@ -38,8 +38,7 @@ router.put("/:id", withAuth, async (req, res) => {
 // Deletes blog post by its id
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    console.log(req.params.id);
-    const blogPostData = await BlogPost.destroy({
+      const blogPostData = await BlogPost.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
