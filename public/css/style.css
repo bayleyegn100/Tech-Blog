@@ -1,0 +1,48 @@
+
+
+.blog-card {
+    border: solid rgb(18, 144, 175);
+    border-radius: .25rem;
+}
+
+.card-header {
+    color: rgb(218, 220, 230);
+}
+
+.card-header:first-child {
+    border-radius: unset;
+}
+
+.blog-title {
+    color: white;
+}
+
+.blog-author {
+    float: right;
+    font-size: medium;
+}
+
+.tech-blog {
+    font-size: x-large;
+    border-style: solid;
+    border-color: rgb(11, 15, 248);
+    border-width: thick;
+    border-radius: .25rem;
+    padding: 2px;
+}
+
+.input-text {
+    color: white;
+}
+
+.post-list {
+    text-align: center;
+}
+
+.delete-button {
+    float: right;
+}
+
+.dashboard-name {
+    text-align: center;
+}
