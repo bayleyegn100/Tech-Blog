@@ -24,7 +24,7 @@ const newFormHandler = async (event) => {
 const editButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
-    document.location.replace(`/edit/post/${id}`)
+    document.location.replace(`/edit/blogPost/${id}`)
   }
 };
 
