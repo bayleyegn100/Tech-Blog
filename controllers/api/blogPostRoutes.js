@@ -9,7 +9,7 @@ router.post("/", withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newBlogPost);
+    res.json(newBlogPost);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -44,15 +44,14 @@ router.delete("/:id", withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-    console.log(blogPostData);
     if (!blogPostData) {
       res
         .status(404)
-        .json({ message: "Could not fount blog post with this id!" });
+        .json({ message: "Could not found blog post with this id!" });
       return;
     }
 
-    res.status(200).json(blogPostData);
+    res.json(blogPostData);
   } catch (err) {
     res.status(500).json(err);
   }
