@@ -9,7 +9,7 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newBlogComment);
+    res.json(newBlogComment);
   } catch (err) {
 
     res.status(400).json(err);
@@ -29,7 +29,7 @@ router.delete('/:id', withAuth, async (req, res) => {
       return;
     }
 
-    res.status(200).json(blogCommentData);
+    res.json(blogCommentData);
   } catch (err) {
     res.status(500).json(err);
   }
