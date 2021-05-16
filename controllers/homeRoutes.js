@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
       ],
     });
     // Serialize data so the template can read it
-    const BlogPosts = blogPostData.map((blogPost) =>
+    const blogPosts = blogPostData.map((blogPost) =>
       blogPost.get({ plain: true })
     );
     // Pass serialized data and session flag into template
@@ -78,7 +78,7 @@ router.get("/edit/blogPost/:id", withAuth, async (req, res) => {
   }
 });
     // Find the logged in user based on the session ID
-    // Use withAuth middleware to prevent access to route
+    // withAuth to prevent access to route
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(Number(req.session.user_id), {
