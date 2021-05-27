@@ -3,6 +3,7 @@
 <div class="card blog-card mb-3">
   <h5 class="card-header bg-dark">
     <a class="blog-title" href="/blogPost/{{blogPost.id}}">{{blogPost.title}}</a>
+    <a class="blog-title" href="/edit/blogPost/{{blogPost.id}}">Edit</a>
     <p class="blog-author">Created by {{blogPost.user.name}} on {{format_date blogPost.date_created}}</p>
   </h5>
   <p>{{blogPost.body}}</p>
