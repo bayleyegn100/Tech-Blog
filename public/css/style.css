@@ -1,12 +1,13 @@
 
 
 .blog-card {
-    border: solid rgb(18, 144, 175);
-    border-radius: .25rem;
+    border: solid rgb(7, 238, 26);
+    border-radius: .15rem;
 }
 
 .card-header {
-    color: rgb(218, 220, 230);
+    color: rgb(0, 1, 5);
+    background-color: rgb(99, 173, 173);
 }
 
 .card-header:first-child {
@@ -14,7 +15,7 @@
 }
 
 .blog-title {
-    color: rgb(1, 0, 12);
+    color: rgb(24, 4, 243);
 }
 
 .blog-author {
@@ -23,12 +24,11 @@
 }
 
 .tech-blog {
-    font-size: x-large;
-    border-style: solid;
-    border-color: rgb(11, 15, 248);
+    font-size: 30px;
     border-width: thick;
-    border-radius: .25rem;
     padding: 2px;
+    text-align: center;
+    color: rgb(249, 249, 250);
 }
 
 .input-text {
@@ -45,4 +45,7 @@
 
 .dashboard-name {
     text-align: center;
+}
+.nav-link {
+    font-size: 25px;
 }
