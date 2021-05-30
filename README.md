@@ -13,7 +13,7 @@
 
 ## Description 
 
-This app is built post, edit, delete and comment a blogpost. To perform those activities a user should have to signup and login by using a credential information.  
+This app is built to post, edit, delete and comment a blogpost. To perform those activities a user should have to signup and login by using a credential information.  
 I used diffrent technologies including express, mysql2, seed, Javascript, HTML, CSS, a software registry and software package manager and installer called Node Package Manager (npm)node.js and other relevant node.js frameworks. 
 
 ![Transaction during online](Img/Homepage.jpg)
