@@ -32,7 +32,11 @@ You do not have a limitation to use this application. As you see the license sec
 
 ## Test instruction 
 
-I checked the application for many times, and it works well. If you want you can click on a likn below.
+I checked the application for many times, and it works well. If you want you can access below the live URL and the code respectively.
+
+https://polar-citadel-72226.herokuapp.com/
+
+https://github.com/bayleyegn100/Tech-Blog
 
 
 
