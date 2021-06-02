@@ -5,7 +5,7 @@ const newCommentHandler = async (event) => {
   const blogPostID = +window.location.pathname.split("/")[2]
   const blogCommentData = {
     body,
-    blogPost_id: blogPostID,
+    post_id: blogPostID,
   };
 
   if (body) {

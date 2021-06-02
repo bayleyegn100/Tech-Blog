@@ -25,7 +25,7 @@ BlogComment.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Blog Comment',
+        modelName: 'BlogComment',
     }
 );
 
